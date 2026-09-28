@@ -1,0 +1,83 @@
+baseurl: "https://joni-on-micro.site"
+languageCode: "en-us"
+title: "Joni on Microsite"
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  blog: "/blog/:year-:month-:day/:slug/"
+
+menu:
+  main:
+    - name: Blog
+      url: "blog/"
+      weight: 2
+    - name: Resume
+      url: "resume/"
+      weight: 1
+    - name: Projects
+      url: "projects/"
+      weight: 3
+
+params:
+  author:
+    name: Joni Hendrickson
+    email: me@joni.site
+  description:
+    "Joni Hendrickson's MCU-hosted site about tiny software, tiny hardware, and
+    tiny robots."
+  footer:
+    "&copy; Jonathan Hendrickson<br>All content licensed under <a
+    href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a>
+    unless otherwise noted.<br>
+    [hendrickson@joni.site](mailto:hendrickson@joni.site)<br>
+    [GitHub](https://github.com/averagewagon) |
+    [LinkedIn](https://www.linkedin.com/in/jonathan-r-hendrickson/) |
+    [RSS](/blog/index.xml)"
+
+minify:
+  minifyOutput: true
+
+enableRobotsTXT: true
+
+outputs:
+  home:
+    - html
+  section:
+    - html
+    - rss
+  taxonomy:
+    - html
+  term:
+    - html
+
+services:
+  rss:
+    limit: 5
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    style: "base16-snazzy"
+    lineNumbersInTable: false
+    tabWidth: 4
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - - \[
+              - \]
+            - - $$
+              - $$
+          inline:
+            - - \(
+              - \)
+# base16-snazzy

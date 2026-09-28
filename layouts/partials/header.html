@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title -->
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    <!-- SEO Meta Description -->
+    <meta
+      name="description"
+      content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    <!-- Open Graph Metadata (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta
+      property="og:description"
+      content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+    />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:image" content="{{ .Site.BaseURL }}banner.webp" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta
+      name="twitter:description"
+      content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+    />
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}banner.webp" />
+
+    <!-- Mobile Theme Color -->
+    <meta name="theme-color" content="#ffb6ff" />
+
+    <!-- Structured Data (JSON-LD for Search Engines) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "{{ .Title }} | {{ .Site.Title }}",
+        "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+        "url": "{{ .Permalink }}",
+        "publisher": {
+          "@type": "Person",
+          "name": "{{ .Site.Params.author.name }}"
+        }
+      }
+    </script>
+
+    {{- $normalize := resources.Get "css/normalize.css" }} {{- $style :=
+    resources.Get "css/style.css" }} {{- $css := slice $normalize $style |
+    resources.Concat "css/bundle.css" | resources.Minify }} {{- if $css }}
+    <style>
+      {{ $css.Content | safeCSS }}
+    </style>
+    {{- end }} {{- $favicon := resources.Get "favicon.ico" }} {{- if $favicon }}
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/x-icon;base64,{{ $favicon.Content | base64Encode }}"
+    />
+    {{- end }}
+  </head>
+
+  <body>
+    <header>
+      <h2><a href="/">Joni on Microsite</a></h2>
+      <span class="subtitle">
+        {{ with .Site.GetPage "about-the-microsite" }}
+        <a href="{{ .RelPermalink }}">This website runs on an MCU</a>
+        {{ end }}
+      </span>
+      <nav>
+        <ul class="menu">
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </header>
+    <hr />
+  </body>
+</html>

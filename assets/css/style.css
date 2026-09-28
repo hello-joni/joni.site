@@ -1,0 +1,178 @@
+body {
+  font-family: "Liberation Sans", "DejaVu Sans", "Noto Sans", "FreeSans", sans-serif;
+}
+
+code {
+  font-family: "Liberation Mono", "DejaVu Sans Mono", "Noto Mono", "FreeMono", monospace;
+}
+
+body {
+  max-width: 800px;
+  margin: 1em auto;
+  color: #fff;
+  background: #1e1e1e;
+  line-height: 1.4;
+  padding: 0 1em;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+header h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header h2 a,
+header span a {
+  text-decoration: none;
+}
+
+header span {
+  font-size: 1.5rem;
+}
+
+.menu {
+  padding: 0;
+  text-align: center;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  background: #2c2c2c;
+  padding: 10px;
+  margin: 5px;
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  color: #6ee3ff;
+}
+
+a:hover {
+  color: #52c6ff;
+}
+
+a:visited {
+  color: #ffb6ff;
+}
+
+a:visited:hover {
+  color: #e092e0;
+}
+
+hr {
+  color: #ddd;
+}
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-navigation a {
+  flex: 1;
+  text-decoration: none;
+}
+
+.prev-article {
+  text-align: left;
+}
+
+.next-article {
+  text-align: right;
+}
+
+/* Article */
+.article-meta {
+  background: #2c2c2c;
+  padding: 10px 20px;
+}
+
+/* code */
+pre {
+  border: 1px solid #ddd;
+  padding: 1em;
+  overflow-x: auto;
+  background-color: #131313 !important;
+  font-size: .8em;
+}
+
+:not(pre)>code {
+  background-color: #131313;
+  padding: .05em .2em;
+  color: #ffffff;
+  border: 1px solid #ddd;
+  font-size: .9em;
+  vertical-align: middle;
+}
+
+pre code {
+  background: none;
+  display: inline-block;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+figure {
+  text-align: center;
+  margin: 1em 0;
+  color: #ddd;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+}
+
+blockquote {
+  background: #292929;
+  border-left: 5px solid #444;
+  padding: 3px 1em 3px;
+}
+
+table {
+  margin: auto;
+  overflow-x: auto;
+}
+
+table thead th {
+  border-bottom: 1px solid #666;
+}
+
+th,
+td {
+  padding: 5px;
+  border-bottom: 1px solid #666;
+}
+
+thead,
+tfoot {
+  background: #353535;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
