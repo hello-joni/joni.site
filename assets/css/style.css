@@ -30,9 +30,9 @@ html {
     radial-gradient(#3b2140 1.5px, transparent 1.5px),
     linear-gradient(
       -45deg,
-      #301a2f 0%,
+      #3e233d 0%,
       #170d17 30%,
-      #1f1120 55%,
+      #2a182c 55%,
       #000000 80%,
       #000000 100%
     );
@@ -366,7 +366,7 @@ tfoot {
   }
 
   html {
-    animation: body-gradient 40s ease infinite;
+    animation: body-gradient 30s ease infinite;
   }
 
   @keyframes body-gradient {
