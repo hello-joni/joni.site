@@ -1,0 +1,3 @@
+baseURL = 'https://joni.site/'
+locale = 'en-us'
+title = 'joni.site'
