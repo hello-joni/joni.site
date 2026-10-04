@@ -198,6 +198,7 @@ hr::after {
 main ul li::marker {
   content: "✿ ";
   color: #ff8fc0;
+  font-size: 0.9em;
 }
 
 .post-navigation {
@@ -366,7 +367,7 @@ tfoot {
   }
 
   html {
-    animation: body-gradient 30s ease infinite;
+    animation: body-gradient 40s ease infinite;
   }
 
   @keyframes body-gradient {
