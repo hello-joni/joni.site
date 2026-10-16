@@ -47,6 +47,9 @@ markup:
     lineNumbersInTable: false
     tabWidth: 4
   goldmark:
+    parser:
+      attribute:
+        block: true
     renderer:
       unsafe: true
     extensions:

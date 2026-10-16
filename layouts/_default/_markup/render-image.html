@@ -1,0 +1,11 @@
+{{ $isVideo := findRE "(?i)\\.(webm|mp4|ogv|ogg)$" .Destination 1 }}
+<figure{{ range $k, $v := .Attributes }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end }}>
+  {{- if $isVideo }}
+  <video controls src="{{ .Destination }}"></video>
+  {{- else }}
+  <img src="{{ .Destination }}" alt="{{ .PlainText }}" />
+  {{- end }}
+  {{- with .PlainText }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

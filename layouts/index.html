@@ -16,16 +16,13 @@
 
   <div class="cards">
     {{ $projects := where .Site.RegularPages "Section" "projects" }} {{ range
-    $projects.ByWeight }} {{ $img := resources.Get (print "media/"
+    $projects.ByWeight }} {{ $img := .Resources.Get (print "media/"
     .Params.image) }} {{ $alt := .Params.altText }} {{ if and $img (not $alt) }}{{
     warnf "Page %s has an image but no altText" .RelPermalink
     }}{{ end }}
     <a class="card" href="{{ .RelPermalink }}">
       {{ with $img }}
-      <img
-        src="data:image/{{ if in (slice "svg" "svg+xml") .MediaType.SubType }}svg+xml{{ else }}{{ .MediaType.SubType }}{{ end }};base64,{{ .Content | base64Encode }}"
-        alt="{{ $alt }}"
-      />
+      <img src="{{ .RelPermalink }}" alt="{{ $alt }}" />
       {{ end }}
       <h3>{{ .Title }}</h3>
       <p>{{ .Description }}</p>

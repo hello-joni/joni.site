@@ -28,7 +28,6 @@
         {{ .Content
             | replaceRE "(<table[^>]*>)" "<div class='table-wrapper'>$1"
             | replaceRE "(</table>)" "$1</div>"
-            | replaceRE "(<img src=\"([^\"]+)\" alt=\"([^\"]+)\" ?/?>)" "<figure><img src=\"$2\" alt=\"$3\" /><figcaption>$3</figcaption></figure>"
             | safeHTML }}
     </div>
 </main>

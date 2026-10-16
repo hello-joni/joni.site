@@ -24,7 +24,7 @@
       content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
     />
     <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:image" content="{{ .Site.BaseURL }}banner.webp" />
+    <meta property="og:image" content="{{ (resources.Get "media/banner.webp").Permalink }}" />
 
     <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -33,7 +33,7 @@
       name="twitter:description"
       content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
     />
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}banner.webp" />
+    <meta name="twitter:image" content="{{ (resources.Get "media/banner.webp").Permalink }}" />
 
     <!-- Mobile Theme Color -->
     <meta name="theme-color" content="#241223" />
