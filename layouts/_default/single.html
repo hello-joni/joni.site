@@ -1,14 +1,23 @@
 {{ partial "header.html" . }}
 
 <main>
+    {{ with .Params.image }}
+    {{ $img := resources.Get (print "media/" .) }}
+    {{ with $img }}
+    <img class="hero" src="data:image/{{ if in (slice "svg" "svg+xml") $img.MediaType.SubType }}svg+xml{{ else }}{{ $img.MediaType.SubType }}{{ end }};base64,{{ $img.Content | base64Encode }}" alt="{{ $.Title }}" />
+    {{ end }}
+    {{ end }}
+
     <div class="article-meta">
         <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+        {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
         {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-        {{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>{{ end }}
+        {{ if (gt .Params.date 0) }}<h2 class="date">Created: {{ .Date.Format "2006-01-02" }}</h2>{{ end }}
+        {{ with .Params.lastmod }}<h2 class="date">Last modified: {{ $.Lastmod.Format "2006-01-02" }}</h2>{{ end }}
 
         {{ with .Params.tags }}
         <p class="tags">
-            Tags: 
+            Tags:
             {{ range $index, $tag := . }}
                 {{- if $index }} | {{ end -}}
                 <a href="{{ relURL (print "/tags/" ($tag | urlize)) }}">{{ $tag }}</a>
@@ -30,9 +39,9 @@
     <hr />
 
     <div class="content">
-        {{ .Content 
-            | replaceRE "(<table[^>]*>)" "<div class='table-wrapper'>$1" 
-            | replaceRE "(</table>)" "$1</div>" 
+        {{ .Content
+            | replaceRE "(<table[^>]*>)" "<div class='table-wrapper'>$1"
+            | replaceRE "(</table>)" "$1</div>"
             | replaceRE "(<img src=\"([^\"]+)\" alt=\"([^\"]+)\" ?/?>)" "<figure><img src=\"$2\" alt=\"$3\" /><figcaption>$3</figcaption></figure>"
             | safeHTML }}
     </div>

@@ -1,6 +1,7 @@
 ---
 title: Sample Image-Heavy Post
 date: "2024-11-26"
+image: samples/circuit-board.webp
 description:
   "A test post showcasing how images, GIFs, and videos are displayed in
   Microsite’s layout. Includes examples of various media styles, size
