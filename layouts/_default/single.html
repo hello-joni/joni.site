@@ -4,16 +4,24 @@
     {{ with .Params.image }}
     {{ $img := resources.Get (print "media/" .) }}
     {{ with $img }}
-    <img class="hero" src="data:image/{{ if in (slice "svg" "svg+xml") $img.MediaType.SubType }}svg+xml{{ else }}{{ $img.MediaType.SubType }}{{ end }};base64,{{ $img.Content | base64Encode }}" alt="{{ $.Title }}" />
+    {{ if not $.Params.altText }}{{ warnf "Page %s has an image but no altText" $.RelPermalink }}{{ end }}
+    <figure>
+      <img src="data:image/{{ if in (slice "svg" "svg+xml") $img.MediaType.SubType }}svg+xml{{ else }}{{ $img.MediaType.SubType }}{{ end }};base64,{{ $img.Content | base64Encode }}" alt="{{ $.Params.altText }}" />
+      {{ with $.Params.altText }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
     {{ end }}
     {{ end }}
 
     <div class="article-meta">
         <h1><span class="title">{{ .Title | markdownify }}</span></h1>
         {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
-        {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-        {{ if (gt .Params.date 0) }}<h2 class="date">Created: {{ .Date.Format "2006-01-02" }}</h2>{{ end }}
-        {{ with .Params.lastmod }}<h2 class="date">Last modified: {{ $.Lastmod.Format "2006-01-02" }}</h2>{{ end }}
+        {{ if or (gt .Params.date 0) .Params.lastmod }}
+        <p class="meta-line">
+            {{- if (gt .Params.date 0) }}Created: {{ .Date.Format "2006-01-02" }}{{ end }}
+            {{- with .Params.lastmod }} | Last modified: {{ $.Lastmod.Format "2006-01-02" }}{{ end }}
+        </p>
+        {{ end }}
+        {{ with .Params.author }}<p class="meta-line">{{ . }}</p>{{ end }}
 
         {{ with .Params.tags }}
         <p class="tags">

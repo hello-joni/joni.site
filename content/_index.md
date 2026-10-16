@@ -3,9 +3,7 @@ title: Home
 ---
 
 Welcome to the **Microsite**, my personal website and blog which is served from
-a single ESP32-S3 in my studio apartment up in Seattle, Washington. For more
-details, check out the ["About the
-Microsite"]({{< ref "about-the-microsite.md" >}}) page.
+a single ESP32-S3 in my studio apartment up in Seattle, Washington.
 
 I'm **Joni Hendrickson**, an embedded systems engineer doing things with
 microcontrollers, robotics, and websites. I've worked on satellites, grocery

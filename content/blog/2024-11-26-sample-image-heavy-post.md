@@ -2,6 +2,7 @@
 title: Sample Image-Heavy Post
 date: "2024-11-26"
 image: samples/circuit-board.webp
+altText: A close-up photograph of a circuit board, a placeholder description for this sample post.
 description:
   "A test post showcasing how images, GIFs, and videos are displayed in
   Microsite’s layout. Includes examples of various media styles, size

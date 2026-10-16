@@ -8,6 +8,7 @@ tags:
   - Embedded
   - Web
 image: portfolio/microsite.svg
+altText: A solid pink rectangle, a placeholder image for the Microsite project.
 weight: 1
 ---
 

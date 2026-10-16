@@ -85,11 +85,6 @@
     </div>
     <header>
       <h2><a href="/">Joni on Microsite</a></h2>
-      <span class="subtitle">
-        {{ with .Site.GetPage "about-the-microsite" }}
-        <a href="{{ .RelPermalink }}">This website runs on an MCU</a>
-        {{ end }}
-      </span>
       <nav>
         <ul class="menu">
           {{ range .Site.Menus.main }}

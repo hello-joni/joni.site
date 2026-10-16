@@ -6,6 +6,7 @@ tags:
   - Robotics
   - Projects
 image: portfolio/checkerbot.svg
+altText: A solid light purple rectangle, a placeholder image for the Checkerbot project.
 weight: 2
 ---
 

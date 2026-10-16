@@ -5,6 +5,7 @@ description: Another placeholder card for this layout sample.
 tags:
   - Projects
 image: portfolio/sample-b.svg
+altText: A solid deep purple rectangle, a placeholder image for another sample project.
 weight: 6
 ---
 

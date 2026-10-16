@@ -6,6 +6,7 @@ tags:
   - Embedded
   - Projects
 image: portfolio/hardware.svg
+altText: A solid mauve rectangle, a placeholder image for the custom hardware project.
 weight: 4
 ---
 

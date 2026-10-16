@@ -6,6 +6,7 @@ tags:
   - Embedded
   - Projects
 image: portfolio/zephyr.svg
+altText: A solid light pink rectangle, a placeholder image for the Zephyn port project.
 weight: 3
 ---
 

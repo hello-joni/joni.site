@@ -110,49 +110,8 @@ header h2 a::after {
   }
 }
 
-header h2 a,
-header span a {
+header h2 a {
   text-decoration: none;
-}
-
-header span {
-  font-size: 1.5rem;
-  font-family: Georgia, "Liberation Serif", "DejaVu Serif", serif;
-  font-style: italic;
-}
-
-header span a {
-  color: #ff9ec7;
-}
-
-header span a:visited {
-  color: #ff9ec7;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-}
-
-.menu a {
-  display: block;
-  text-decoration: none;
-  background: #3d2140;
-  color: #ffb1d8;
-  padding: 10px;
-  margin: 5px;
-  border: 2px dotted #ff9ec7;
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 1rem;
-}
-
-.menu a:visited {
-  color: #ffb1d8;
 }
 
 footer {
@@ -228,6 +187,12 @@ main ul li::marker {
   padding: 10px 20px;
   border: 2px dashed #ff8ab8;
   border-radius: 14px;
+}
+
+.article-meta .meta-line {
+  font-size: 0.9rem;
+  color: #eac2d6;
+  margin: 0.25em 0 0;
 }
 
 /* Table of contents */
@@ -544,15 +509,6 @@ tfoot {
     font-size: 2.25rem;
   }
 
-  header span {
-    font-size: 1.25rem;
-  }
-
-  .menu a {
-    font-size: 0.9rem;
-    margin: 3px;
-  }
-
   body {
     padding: 0 8px;
   }
@@ -602,13 +558,6 @@ tfoot {
 .card p {
   margin: 0;
   color: #eac2d6;
-}
-
-/* Hero image at the top of a post */
-.hero {
-  width: 100%;
-  border-radius: 12px;
-  margin: 0 0 1.5em;
 }
 
 /* Older posts toggle on the homepage */
