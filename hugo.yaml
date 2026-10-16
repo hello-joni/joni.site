@@ -13,12 +13,10 @@ params:
   description:
     "Joni Hendrickson's MCU-hosted site about tiny software, tiny hardware, and
     tiny robots."
-  footer: "&copy; Jonathan Hendrickson<br>All content licensed under <a
-    href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a>
-    unless otherwise noted.<br>
-    [hendrickson@joni.site](mailto:hendrickson@joni.site)<br>
+  footer: "[contact@joni.site](mailto:contact@joni.site)<br>
     [GitHub](https://github.com/averagewagon) |
     [LinkedIn](https://www.linkedin.com/in/jonathan-r-hendrickson/) |
+    [Resume](/resume/) |
     [RSS](/blog/index.xml)"
 
 minify:
@@ -42,10 +40,6 @@ services:
     limit: 5
 
 markup:
-  tableOfContents:
-    startLevel: 2
-    endLevel: 4
-    ordered: false
   highlight:
     codeFences: true
     guessSyntax: true

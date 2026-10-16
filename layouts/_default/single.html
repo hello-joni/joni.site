@@ -1,48 +1,26 @@
 {{ partial "header.html" . }}
 
 <main>
-    {{ with .Params.image }}
-    {{ $img := resources.Get (print "media/" .) }}
-    {{ with $img }}
-    {{ if not $.Params.altText }}{{ warnf "Page %s has an image but no altText" $.RelPermalink }}{{ end }}
-    <figure>
-      <img src="data:image/{{ if in (slice "svg" "svg+xml") $img.MediaType.SubType }}svg+xml{{ else }}{{ $img.MediaType.SubType }}{{ end }};base64,{{ $img.Content | base64Encode }}" alt="{{ $.Params.altText }}" />
-      {{ with $.Params.altText }}<figcaption>{{ . }}</figcaption>{{ end }}
-    </figure>
-    {{ end }}
-    {{ end }}
-
-    <div class="article-meta">
-        <h1><span class="title">{{ .Title | markdownify }}</span></h1>
-        {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
-        {{ if or (gt .Params.date 0) .Params.lastmod }}
-        <p class="meta-line">
-            {{- if (gt .Params.date 0) }}Created: {{ .Date.Format "2006-01-02" }}{{ end }}
-            {{- with .Params.lastmod }} | Last modified: {{ $.Lastmod.Format "2006-01-02" }}{{ end }}
-        </p>
+    <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+    {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+    <ul>
+        {{ if (gt .Params.date 0) }}
+        <li>Created: {{ .Date.Format "2006-01-02" }}</li>
         {{ end }}
-        {{ with .Params.author }}<p class="meta-line">{{ . }}</p>{{ end }}
-
+        {{ with .Params.lastmod }}
+        <li>Last modified: {{ $.Lastmod.Format "2006-01-02" }}</li>
+        {{ end }}
+        {{ with .Params.author }}<li>{{ . }}</li>{{ end }}
         {{ with .Params.tags }}
-        <p class="tags">
+        <li>
             Tags:
             {{ range $index, $tag := . }}
                 {{- if $index }} | {{ end -}}
                 <a href="{{ relURL (print "/tags/" ($tag | urlize)) }}">{{ $tag }}</a>
             {{ end }}
-        </p>
+        </li>
         {{ end }}
-
-        {{- if and (.Params.toc) (gt (len .TableOfContents) 50) }}
-
-        <hr />
-
-        <aside class="table-of-contents">
-            <h2>Table of Contents</h2>
-            {{ .TableOfContents }}
-        </aside>
-        {{- end }}
-    </div>
+    </ul>
 
     <hr />
 

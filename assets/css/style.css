@@ -181,42 +181,6 @@ main ul li::marker {
   text-align: right;
 }
 
-/* Article */
-.article-meta {
-  background: #331b31;
-  padding: 10px 20px;
-  border: 2px dashed #ff8ab8;
-  border-radius: 14px;
-}
-
-.article-meta .meta-line {
-  font-size: 0.9rem;
-  color: #eac2d6;
-  margin: 0.25em 0 0;
-}
-
-/* Table of contents */
-.table-of-contents {
-  background: #2f1830;
-  border: 2px dotted #ff8ab8;
-  border-radius: 12px;
-  padding: 0.25rem 16px;
-}
-
-/* Tags */
-.tags a {
-  background: #3d2140;
-  color: #ffb1d8;
-  padding: 2px 8px;
-  border: 1px solid #6b3f63;
-  border-radius: 999px;
-  text-decoration: none;
-}
-
-.tags a:visited {
-  color: #ffb1d8;
-}
-
 /* code */
 pre {
   border: 1px solid #c86a9e;
