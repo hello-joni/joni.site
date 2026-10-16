@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -84,7 +84,7 @@
       <div class="firefly"></div>
     </div>
     <header>
-      <h2><a href="/">Joni on Microsite</a></h2>
+      <h2><a href="/">{{ .Site.Title }}</a></h2>
       <nav>
         <ul class="menu">
           {{ range .Site.Menus.main }}

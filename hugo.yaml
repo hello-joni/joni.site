@@ -1,6 +1,6 @@
 baseurl: "https://joni-on-micro.site"
-languageCode: "en-us"
-title: "Joni on Microsite"
+locale: "en-us"
+title: "JoniSite"
 footnotereturnlinkcontents: "↩"
 
 permalinks:
