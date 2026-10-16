@@ -13,7 +13,7 @@ params:
   description:
     "Joni Hendrickson's MCU-hosted site about tiny software, tiny hardware, and
     tiny robots."
-  footer: "[contact@joni.site](mailto:contact@joni.site)<br>
+  footer: "Please email me: [contact@joni.site](mailto:contact@joni.site)<br>
     [GitHub](https://github.com/averagewagon) |
     [LinkedIn](https://www.linkedin.com/in/jonathan-r-hendrickson/) |
     [Resume](/resume/) |
@@ -50,6 +50,7 @@ markup:
     parser:
       attribute:
         block: true
+      wrapStandAloneImageWithinParagraph: false
     renderer:
       unsafe: true
     extensions:

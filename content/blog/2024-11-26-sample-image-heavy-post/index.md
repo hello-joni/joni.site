@@ -38,7 +38,8 @@ A newspaper layout often has images wrapped by text. Below are examples of how
 This image should **float to the right**, allowing the text to wrap around it
 naturally.
 
-![A close-up of a PCB](media/circuit-board.webp) {style="max-width:30%;float:right;margin-left:15px;"}
+![A close-up of a PCB](media/circuit-board.webp)
+{style="max-width:30%;float:right;margin-left:15px;"}
 
 Microsite is built to serve static web content directly from flash storage,
 using an embedded HTTP server on an ESP32-S3. The entire site is generated using
@@ -53,7 +54,8 @@ often worth it.
 
 Now, let's try the same thing but with an image floating to the left:
 
-![An ESP32-S3 development board](media/esp32-module.webp) {style="max-width:30%;float:left;margin-right:15px;"}
+![An ESP32-S3 development board](media/esp32-module.webp)
+{style="max-width:30%;float:left;margin-right:15px;"}
 
 The ESP32-S3 is a powerful microcontroller, featuring built-in WiFi and
 Bluetooth capabilities. While it’s not traditionally used for web hosting, the
@@ -71,7 +73,8 @@ no need for an external content delivery network or database.
 Sometimes, you just want an image to be **big and centered**, without any
 wrapping text:
 
-![A rack-mounted server, the opposite of Microsite](media/server-rack.webp) {style="max-width:80%;margin:auto;display:block;"}
+![A rack-mounted server, the opposite of Microsite](media/server-rack.webp)
+{style="max-width:80%;margin:auto;display:block;"}
 
 In contrast to traditional server racks, which require dedicated infrastructure
 and high power consumption, Microsite runs on a tiny ESP32-S3 board, consuming
@@ -85,7 +88,8 @@ but to explore the limits of embedded web servers.
 GIFs are often used for animations and simple motion graphics. Let’s add a
 small, **inline** animated GIF for emphasis:
 
-![A simple loading animation](media/loading-animation.gif) {style="max-width:15%;min-width:40px;float:right;margin-left:10px;"}
+![A simple loading animation](media/loading-animation.gif)
+{.bare style="max-width:15%;min-width:40px;float:right;margin-left:10px;"}
 
 With static hosting, there's no server-side processing—every page is just **raw
 HTML**. This means no dynamic page generation, no user logins, and no backend
@@ -102,7 +106,8 @@ dashboards, or personal websites** that don’t need frequent updates.
 Let’s try an image that **spans the entire width** of the post, ideal for
 section breaks:
 
-![A wide banner image](media/wide-banner.webp) {style="width:100%;margin:auto;display:block;"}
+![A wide banner image](media/wide-banner.webp)
+{style="width:100%;margin:auto;display:block;"}
 
 Microsite is built with a focus on performance, stripping away unnecessary
 complexity. The site is precompressed using Brotli before being stored in
@@ -114,7 +119,8 @@ complexity. The site is precompressed using Brotli before being stored in
 
 Not every image needs to be large. Here’s a **small, centered thumbnail**:
 
-![A tiny microcontroller chip](media/chip-thumbnail.webp) {style="max-width:10%;min-width:40px;margin:auto;display:block;"}
+![A tiny microcontroller chip](media/chip-thumbnail.webp)
+{.bare style="max-width:10%;min-width:40px;margin:auto;display:block;"}
 
 While the ESP32-S3 is physically small, its capabilities are impressive. With
 **8MB of PSRAM and 16MB of flash storage**, it’s more than capable of running a

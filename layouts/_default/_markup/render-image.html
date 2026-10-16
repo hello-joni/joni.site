@@ -1,11 +1,22 @@
 {{ $isVideo := findRE "(?i)\\.(webm|mp4|ogv|ogg)$" .Destination 1 }}
+{{ $caption := .Title | default .PlainText }}
+{{ $isBare := false }}
+{{ with .Attributes.class }}{{ if in (split . " ") "bare" }}{{ $isBare = true }}{{ end }}{{ end }}
+{{ if or (not .IsBlock) $isBare }}
+{{ if $isVideo }}
+<video controls src="{{ .Destination }}"{{ range $k, $v := .Attributes }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end }}></video>
+{{ else }}
+<img src="{{ .Destination }}" alt="{{ .PlainText }}"{{ range $k, $v := .Attributes }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end }} />
+{{ end }}
+{{ else }}
 <figure{{ range $k, $v := .Attributes }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end }}>
   {{- if $isVideo }}
   <video controls src="{{ .Destination }}"></video>
   {{- else }}
   <img src="{{ .Destination }}" alt="{{ .PlainText }}" />
   {{- end }}
-  {{- with .PlainText }}
+  {{- with $caption }}
   <figcaption>{{ . }}</figcaption>
   {{- end }}
 </figure>
+{{ end }}

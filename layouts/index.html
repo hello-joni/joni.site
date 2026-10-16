@@ -3,17 +3,7 @@
 <main>
   {{ .Content }}
 
-  <ul>
-    {{ $blog := where .Site.RegularPages "Section" "blog" }} {{ range first 10
-    $blog.ByDate.Reverse }}
-    <li>
-      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-    </li>
-    {{ end }}
-    <li><a href="{{ relURL "blog/" }}">Blog Archive</a></li>
-  </ul>
-
+  <h2>Projects</h2>
   <div class="cards">
     {{ $projects := where .Site.RegularPages "Section" "projects" }} {{ range
     $projects.ByWeight }} {{ $img := .Resources.Get (print "media/"
@@ -29,6 +19,18 @@
     </a>
     {{ end }}
   </div>
+
+  <h2>Blog</h2>
+  <ul>
+    {{ $blog := where .Site.RegularPages "Section" "blog" }} {{ range first 10
+    $blog.ByDate.Reverse }}
+    <li>
+      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+    </li>
+    {{ end }}
+    <li><a href="{{ relURL "blog/" }}">Blog Archive</a></li>
+  </ul>
 </main>
 
 {{ partial "footer.html" . }}
