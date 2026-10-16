@@ -63,7 +63,6 @@ body {
 
 header {
   text-align: center;
-  padding-bottom: 0.5rem;
   background-image: repeating-radial-gradient(
     circle at 50% 20%,
     rgba(255, 158, 199, 0.06) 0,
@@ -79,6 +78,10 @@ header h2 {
 }
 
 header h2 a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.3rem;
   color: #ff6fae;
 }
 

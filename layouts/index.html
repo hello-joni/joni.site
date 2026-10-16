@@ -4,16 +4,14 @@
   {{ .Content }}
 
   <ul>
-    {{ $blog := where .Site.RegularPages "Section" "blog" }} {{ range first 5
+    {{ $blog := where .Site.RegularPages "Section" "blog" }} {{ range first 10
     $blog.ByDate.Reverse }}
     <li>
       <span class="date">{{ .Date.Format "2006-01-02" }}</span>
       <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
     </li>
     {{ end }}
-    {{ with after 5 $blog.ByDate.Reverse }}
-    <li><a href="{{ relURL "blog/" }}">Older posts...</a></li>
-    {{ end }}
+    <li><a href="{{ relURL "blog/" }}">Blog Archive</a></li>
   </ul>
 
   <div class="cards">

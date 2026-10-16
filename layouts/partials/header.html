@@ -85,13 +85,6 @@
     </div>
     <header>
       <h2><a href="/">{{ .Site.Title }}</a></h2>
-      <nav>
-        <ul class="menu">
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
     </header>
   </body>
 </html>
