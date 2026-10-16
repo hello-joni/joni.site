@@ -287,14 +287,13 @@ video {
 
 /* Figures */
 figure {
-  text-align: center;
-  margin: 1.5em 0;
+  width: fit-content;
+  margin: 1.5em auto;
   padding: 10px;
   background: #2f1830;
   border: 2px solid #ff9ec7;
-  outline: 1px solid #8a4f77;
-  outline-offset: 7px;
   color: #d8a8c4;
+  text-align: center;
 }
 
 figcaption {
