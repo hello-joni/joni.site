@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+<main>
+  {{ .Content }}
+
+  <div class="cards">
+    {{ range .Site.Data.projects }} {{ $img := resources.Get (print "media/"
+    .image) }}
+    <div class="card">
+      <img
+        src="data:image/svg+xml;base64,{{ $img.Content | base64Encode }}"
+        alt="{{ .title }}"
+      />
+      <h3>{{ .title }}</h3>
+      <p>{{ .description }}</p>
+    </div>
+    {{ end }}
+  </div>
+
+  <h2>Blog Posts</h2>
+  <ul>
+    {{ range where .Site.RegularPages "Section" "!=" "" }}
+    <li>
+      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</main>
+
+{{ partial "footer.html" . }}

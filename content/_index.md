@@ -14,17 +14,3 @@ that I could get better at writing, and so that I could talk about the things I
 make.
 
 {{< media "headshot.webp" "A picture of Joni Hendrickson, in the electronics workshop at Seattle Makers" "true" "border:2px solid #ddd;padding: .5em;background-color: #131313 !important; box-sizing: border-box;">}}
-
-## What am I working on?
-
-I've just about finished with my first version of the Microsite, running on an
-ESP32-S3 devkit and ESP-IDF, and I'm cutting myself off to work on writing up
-some blog posts.
-
-Afterwards, there's a few things I may work on:
-
-- Making "Checkerbot" -- a small gantry robot which plays checkers
-- Porting the Microsite to the Zephyr RTOS
-- Designing some custom hardware for the Microsite
-
-## Blog Posts

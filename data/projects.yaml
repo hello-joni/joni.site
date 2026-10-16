@@ -1,0 +1,25 @@
+# Sample portfolio cards for the homepage grid.
+# Images live in assets/media/portfolio/.
+- title: The Microsite
+  description: This website, running on an ESP32-S3 devkit with ESP-IDF.
+  image: portfolio/microsite.svg
+
+- title: Checkerbot
+  description: A small gantry robot which plays checkers.
+  image: portfolio/checkerbot.svg
+
+- title: Zephyn RTOS Port
+  description: Moving the Microsite firmware to the Zephyr RTOS.
+  image: portfolio/zephyr.svg
+
+- title: Custom Hardware
+  description: Custom hardware for the Microsite.
+  image: portfolio/hardware.svg
+
+- title: Sample Project
+  description: A placeholder card for this layout sample.
+  image: portfolio/sample-a.svg
+
+- title: Another Sample
+  description: Another placeholder card for this layout sample.
+  image: portfolio/sample-b.svg

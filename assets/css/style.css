@@ -1,6 +1,6 @@
 body {
   font-family: Georgia, "Liberation Serif", "DejaVu Serif", serif;
-  font-size: 120%;
+  font-size: 1.2rem;
 }
 
 code {
@@ -49,11 +49,11 @@ html {
 }
 
 body {
-  max-width: 800px;
+  max-width: 70rem;
   margin: 1em auto;
   color: #f7e6ef;
   line-height: 1.4;
-  padding: 0 1em;
+  padding: 0 16px;
 }
 
 ::selection {
@@ -63,7 +63,7 @@ body {
 
 header {
   text-align: center;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
   background-image: repeating-radial-gradient(
     circle at 50% 20%,
     rgba(255, 158, 199, 0.06) 0,
@@ -131,11 +131,10 @@ header span a:visited {
 
 .menu {
   list-style: none;
-  display: inline-grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
-  text-align: center;
 }
 
 .menu a {
@@ -149,7 +148,7 @@ header span a:visited {
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.85em;
+  font-size: 1rem;
 }
 
 .menu a:visited {
@@ -198,7 +197,7 @@ hr::after {
 main ul li::marker {
   content: "✿ ";
   color: #ff8fc0;
-  font-size: 0.9em;
+  font-size: 1rem;
 }
 
 .post-navigation {
@@ -236,7 +235,7 @@ main ul li::marker {
   background: #2f1830;
   border: 2px dotted #ff8ab8;
   border-radius: 12px;
-  padding: 0.25em 1em;
+  padding: 0.25rem 16px;
 }
 
 /* Tags */
@@ -256,10 +255,10 @@ main ul li::marker {
 /* code */
 pre {
   border: 1px solid #c86a9e;
-  padding: 1em;
+  padding: 1rem 16px;
   overflow-x: auto;
   background-color: #1c1018 !important;
-  font-size: 0.8em;
+  font-size: 0.85rem;
   border-radius: 10px;
 }
 
@@ -268,7 +267,7 @@ pre {
   padding: 0.05em 0.2em;
   color: #ffb1d8;
   border: 1px solid #6b3f63;
-  font-size: 0.9em;
+  font-size: 1rem;
   vertical-align: middle;
   border-radius: 6px;
 }
@@ -307,7 +306,7 @@ figcaption {
 blockquote {
   background: #331b31;
   border-left: 5px double #ff8ab8;
-  padding: 3px 1em 3px;
+  padding: 3px 16px;
   border-radius: 0 10px 10px 0;
 }
 
@@ -535,4 +534,55 @@ tfoot {
       transform: translate(26px, -18px);
     }
   }
+}
+
+@media (max-width: 30rem) {
+  html {
+    font-size: 90%;
+  }
+
+  header h2 {
+    font-size: 2.25rem;
+  }
+
+  header span {
+    font-size: 1.25rem;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+    margin: 3px;
+  }
+
+  body {
+    padding: 0 8px;
+  }
+
+  pre {
+    font-size: 0.75rem;
+    padding: 0.5rem 8px;
+  }
+}
+
+/* Portfolio grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0;
 }
