@@ -1,6 +1,6 @@
 ---
-title: Joni's Projects
+title: "Joni's Projects"
 description: "Personal projects that Joni has been working on."
 ---
 
-Under construction.
+Each page below is a write-up of one project.

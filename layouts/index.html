@@ -4,22 +4,25 @@
   {{ .Content }}
 
   <div class="cards">
-    {{ range .Site.Data.projects }} {{ $img := resources.Get (print "media/"
-    .image) }}
-    <div class="card">
+    {{ $projects := where .Site.RegularPages "Section" "projects" }} {{ range
+    $projects.ByWeight }} {{ $img := resources.Get (print "media/"
+    .Params.image) }}
+    <a class="card" href="{{ .RelPermalink }}">
+      {{ with $img }}
       <img
-        src="data:image/svg+xml;base64,{{ $img.Content | base64Encode }}"
-        alt="{{ .title }}"
+        src="data:image/svg+xml;base64,{{ .Content | base64Encode }}"
+        alt="{{ .Title }}"
       />
-      <h3>{{ .title }}</h3>
-      <p>{{ .description }}</p>
-    </div>
+      {{ end }}
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Description }}</p>
+    </a>
     {{ end }}
   </div>
 
   <h2>Blog Posts</h2>
   <ul>
-    {{ range where .Site.RegularPages "Section" "!=" "" }}
+    {{ range where .Site.RegularPages "Section" "blog" }}
     <li>
       <span class="date">{{ .Date.Format "2006-01-02" }}</span>
       <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
