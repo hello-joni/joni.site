@@ -2,7 +2,7 @@
 
 <main>
     <h1><span class="title">{{ .Title | markdownify }}</span></h1>
-    {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+    {{ with .Description }}<p class="description"><strong>{{ . }}</strong></p>{{ end }}
     <ul>
         {{ if (gt .Params.date 0) }}
         <li>Created: {{ .Date.Format "2006-01-02" }}</li>
@@ -21,6 +21,8 @@
         </li>
         {{ end }}
     </ul>
+
+    <p><em>No AI-written content on this website.</em></p>
 
     <hr />
 
