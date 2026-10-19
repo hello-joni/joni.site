@@ -1,6 +1,7 @@
 ---
 title: Older Short Post
 date: "2024-10-10"
+draft: true
 description:
   "An intentionally older post designed to exist as a reference point for
   testing date-based sorting and site behavior with past content."

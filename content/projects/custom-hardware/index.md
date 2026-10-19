@@ -1,6 +1,7 @@
 ---
 title: Custom Hardware
 date: "2026-10-16"
+draft: true
 description: Custom hardware for the Microsite.
 tags:
   - Embedded

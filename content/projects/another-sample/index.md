@@ -1,6 +1,7 @@
 ---
 title: Another Sample
 date: "2026-10-16"
+draft: true
 description: Another placeholder card for this layout sample.
 tags:
   - Projects

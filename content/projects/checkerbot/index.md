@@ -1,6 +1,7 @@
 ---
 title: Checkerbot
 date: "2026-10-16"
+draft: true
 description: A small gantry robot which plays checkers.
 tags:
   - Robotics

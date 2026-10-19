@@ -1,6 +1,7 @@
 ---
 title: Zephyn RTOS Port
 date: "2026-10-16"
+draft: true
 description: Moving the Microsite firmware to the Zephyn RTOS.
 tags:
   - Embedded

@@ -1,6 +1,7 @@
 ---
 title: Sample Code-Heavy Post
 date: "2025-01-14"
+draft: true
 description:
   "A post demonstrating syntax highlighting for multiple programming languages,
   including C, Python, JavaScript, Shell, and Rust. Useful for testing

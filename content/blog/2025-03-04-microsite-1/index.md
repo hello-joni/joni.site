@@ -1,6 +1,7 @@
 ---
 title: "Serving this Blog at 240 MHz"
 date: "2025-03-04"
+draft: true
 description:
   "Why are web servers so complex and expensive when all they do is exchange
   text? This article covers the technical design of

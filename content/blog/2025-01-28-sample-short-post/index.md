@@ -1,6 +1,7 @@
 ---
 title: Sample Short Post
 date: "2025-01-28"
+draft: true
 description:
   "A brief example post designed to show how short-form content appears in
   Microsite’s layout. Contains minimal text to test styling adjustments for

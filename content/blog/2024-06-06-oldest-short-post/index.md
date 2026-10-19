@@ -1,6 +1,7 @@
 ---
 title: Oldest Short Post
 date: "2024-06-06"
+draft: true
 description:
   "A deliberately old post meant to be the earliest entry on the site. Exists
   only to provide a stable reference for sorting and pagination tests."
