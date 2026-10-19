@@ -4,6 +4,6 @@ description: "Joni's resume."
 ---
 
 You can view my resume directly below or
-[download it here](media/Jonathan_Hendrickson_resume.pdf).
+[download it here](media/Joni_Hendrickson_resume.pdf).
 
-<iframe src="media/Jonathan_Hendrickson_resume.pdf" width="100%" height="1100px" style="border:none;"></iframe>
+<iframe src="media/Joni_Hendrickson_resume.pdf" width="100%" height="1100px" style="border:none;"></iframe>
