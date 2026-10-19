@@ -1,5 +1,12 @@
 {{ partial "header.html" . }}
 
-404 NOT FOUND
+<main class="not-found">
+  <h1>404</h1>
+  <p>
+    This page does not exist. The page may have moved, or the link may be
+    wrong.
+  </p>
+  <p><a href="{{ relURL "" }}">Return to the home page</a></p>
+</main>
 
 {{ partial "footer.html" . }}

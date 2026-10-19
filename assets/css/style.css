@@ -530,3 +530,13 @@ tfoot {
 .card {
   background: #2f1830;
 }
+
+/* 404 page */
+.not-found {
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 5rem;
+  margin: 2rem 0 1rem;
+}
