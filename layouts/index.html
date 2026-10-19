@@ -32,16 +32,16 @@
     {{ end }}
   </ul>
 
-  {{- $allTags := slice -}}
-  {{- range .Site.Taxonomies.tags -}}
-  {{- $allTags = $allTags | append .Page.Title -}}
-  {{- end -}}
-  {{- if gt (len $allTags) 0 -}}
   <p>
     Tags:
-    {{ range $index, $tag := $allTags }}{{ if $index }} | {{ end }}<a href="{{ relURL (print "tags/" ($tag | urlize)) }}">{{ $tag }}</a>{{ end }}
+    <a href="{{ relURL (print "tags/" ("Code" | urlize)) }}">Code</a> |
+    <a href="{{ relURL (print "tags/" ("Embedded" | urlize)) }}">Embedded</a> |
+    <a href="{{ relURL (print "tags/" ("Formatting" | urlize)) }}">Formatting</a> |
+    <a href="{{ relURL (print "tags/" ("Images" | urlize)) }}">Images</a> |
+    <a href="{{ relURL (print "tags/" ("Layout" | urlize)) }}">Layout</a> |
+    <a href="{{ relURL (print "tags/" ("Markdown" | urlize)) }}">Markdown</a> |
+    <a href="{{ relURL (print "tags/" ("Media" | urlize)) }}">Media</a>
   </p>
-  {{- end }}
 </main>
 
 {{ partial "footer.html" . }}
