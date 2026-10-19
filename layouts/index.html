@@ -21,16 +21,28 @@
   </div>
 
   <h2>Blog</h2>
+  <a href="{{ relURL "blog/index.xml" }}" title="RSS Feed">RSS Feed (index.xml)</a>
+
   <ul>
-    {{ $blog := where .Site.RegularPages "Section" "blog" }} {{ range first 10
+    {{ $blog := where .Site.RegularPages "Section" "blog" }} {{ range
     $blog.ByDate.Reverse }}
     <li>
       <span class="date">{{ .Date.Format "2006-01-02" }}</span>
       <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
     </li>
     {{ end }}
-    <li><a href="{{ relURL "blog/" }}">Blog Archive</a></li>
   </ul>
+
+  {{- $allTags := slice -}}
+  {{- range .Site.Taxonomies.tags -}}
+  {{- $allTags = $allTags | append .Page.Title -}}
+  {{- end -}}
+  {{- if gt (len $allTags) 0 -}}
+  <p>
+    Tags:
+    {{ range $index, $tag := $allTags }}{{ if $index }} | {{ end }}<a href="{{ relURL (print "tags/" ($tag | urlize)) }}">{{ $tag }}</a>{{ end }}
+  </p>
+  {{- end }}
 </main>
 
 {{ partial "footer.html" . }}
