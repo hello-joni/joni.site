@@ -23,10 +23,12 @@ minify:
   minifyOutput: true
 
 enableRobotsTXT: true
+enableGitInfo: true
 
 outputs:
   home:
     - html
+    - rss
   section:
     - html
     - rss

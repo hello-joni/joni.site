@@ -7,8 +7,8 @@
         {{ if (gt .Params.date 0) }}
         <li>Created: {{ .Date.Format "2006-01-02" }}</li>
         {{ end }}
-        {{ with .Params.lastmod }}
-        <li>Last modified: {{ $.Lastmod.Format "2006-01-02" }}</li>
+        {{ if not .Lastmod.IsZero }}
+        <li>Last modified: {{ .Lastmod.Format "2006-01-02" }}</li>
         {{ end }}
         {{ with .Params.author }}<li>{{ . }}</li>{{ end }}
         {{ with .Params.tags }}

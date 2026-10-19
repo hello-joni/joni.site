@@ -1,7 +1,6 @@
 ---
 title: "A title"
 date: "2025-06-26"
-lastmod: "2025-10-16"
 description: "A description"
 tags:
   - Microsite
