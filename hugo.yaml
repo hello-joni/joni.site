@@ -17,7 +17,7 @@ params:
     [GitHub](https://github.com/averagewagon) |
     [LinkedIn](https://www.linkedin.com/in/jonathan-r-hendrickson/) |
     [Resume](/resume/) |
-    [RSS](/blog/index.xml)"
+    [RSS Feed](/blog/index.xml)"
 
 minify:
   minifyOutput: true

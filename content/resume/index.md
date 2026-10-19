@@ -1,9 +1,8 @@
 ---
 title: Joni's Resume
-description: "Joni's resume."
+description: ""
 ---
 
-You can view my resume directly below or
-[download it here](media/Joni_Hendrickson_resume.pdf).
+[Click here to download Joni Hendrickson's resume](media/Joni_Hendrickson_resume.pdf).
 
-<iframe src="media/Joni_Hendrickson_resume.pdf" width="100%" height="1100px" style="border:none;"></iframe>
+<iframe src="media/Joni_Hendrickson_resume.pdf" width="100%" height="1430px" style="border:none;"></iframe>
