@@ -6,7 +6,6 @@ tags:
   - Projects
 image: sample-b.webp
 altText: A solid deep purple rectangle, a placeholder image for another sample project.
-weight: 6
 ---
 
 This placeholder page shows the card flow.

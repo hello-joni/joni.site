@@ -7,7 +7,6 @@ tags:
   - Projects
 image: zephyr.webp
 altText: A solid light pink rectangle, a placeholder image for the Zephyn port project.
-weight: 3
 ---
 
 This page will hold the Zephyn port write-up.

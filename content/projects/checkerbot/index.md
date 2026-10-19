@@ -7,7 +7,6 @@ tags:
   - Projects
 image: checkerbot.webp
 altText: A solid light purple rectangle, a placeholder image for the Checkerbot project.
-weight: 2
 ---
 
 This page will hold the Checkerbot write-up.

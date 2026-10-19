@@ -8,7 +8,6 @@ tags:
   - Web
 image: microsite.webp
 altText: A solid pink rectangle, a placeholder image for the Microsite project.
-weight: 1
 ---
 
 This page will hold the Microsite write-up.
