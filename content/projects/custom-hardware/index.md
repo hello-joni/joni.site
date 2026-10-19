@@ -5,7 +5,7 @@ description: Custom hardware for the Microsite.
 tags:
   - Embedded
   - Projects
-image: hardware.svg
+image: hardware.webp
 altText: A solid mauve rectangle, a placeholder image for the custom hardware project.
 weight: 4
 ---

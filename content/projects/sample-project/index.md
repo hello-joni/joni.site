@@ -4,7 +4,7 @@ date: "2026-10-16"
 description: A placeholder card for this layout sample.
 tags:
   - Projects
-image: sample-a.svg
+image: sample-a.webp
 altText: A solid dark purple rectangle, a placeholder image for a sample project.
 weight: 5
 ---

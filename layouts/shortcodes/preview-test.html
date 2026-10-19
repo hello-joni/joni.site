@@ -1,0 +1,27 @@
+{{/* preview-test: renders the Open Graph / Twitter preview images that
+header.html builds, so they can be checked in a browser. Shows the banner
+fallback and every project image, each cropped to 1200x630 with the badge
+overlay. For use in a draft post. Delete the post and this shortcode when the
+previews look right. */}} {{ $badge := resources.Get "media/badge.png" }} {{
+$banner := resources.Get "media/banner.webp" }} {{ with $badge }} {{ $banner =
+$banner.Filter (images.Overlay . 24 24) }} {{ end }}
+<h3>Site banner (fallback for pages without an image)</h3>
+<p><code>{{ $banner.Permalink }}</code></p>
+<img
+  src="{{ $banner.RelPermalink }}"
+  alt="Site banner with badge overlay"
+  style="width: 100%"
+/>
+
+{{ range (where site.RegularPages "Section" "projects").ByWeight }} {{ $p := .
+}} {{ with $p.Params.image }} {{ $img := $p.Resources.Get (print "media/" .) }}
+{{ with $img }} {{ $preview := $img.Fill "1200x630" }} {{ with $badge }} {{
+$preview = $preview.Filter (images.Overlay . 24 24) }} {{ end }}
+<h3>{{ $p.Title }}</h3>
+<p><code>{{ $preview.Permalink }}</code></p>
+<img
+  src="{{ $preview.RelPermalink }}"
+  alt="{{ $p.Params.altText }}"
+  style="width: 100%"
+/>
+{{ end }} {{ end }} {{ end }}

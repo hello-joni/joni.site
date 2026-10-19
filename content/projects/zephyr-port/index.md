@@ -5,7 +5,7 @@ description: Moving the Microsite firmware to the Zephyn RTOS.
 tags:
   - Embedded
   - Projects
-image: zephyr.svg
+image: zephyr.webp
 altText: A solid light pink rectangle, a placeholder image for the Zephyn port project.
 weight: 3
 ---

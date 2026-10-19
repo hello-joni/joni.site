@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 64">
+  <!-- Badge for Open Graph / Twitter preview images.
+       Matches the site header: dark background, "joni.site" in the
+       header link pink, bold italic, with a heart before separated by
+       the header's 0.25em gap. Heart in the header heart color.
+       Rendered to badge.png at exactly 178x64 for images.Overlay. -->
+  <rect width="178" height="64" rx="16" fill="#241223" />
+
+  <!-- Heart before, centered at (27, 33) -->
+  <g transform="translate(27 33) scale(1.8) translate(-8 -8.5)">
+    <path
+      d="M11.623 2A3.377 3.377 0 0 1 15 5.377v.258c0 .88-.32 1.73-.9 2.392L8 15L1.9 8.027A3.63 3.63 0 0 1 1 5.635v-.258a3.377 3.377 0 0 1 6.014-2.11L8 4.5l.986-1.232A3.38 3.38 0 0 1 11.623 2"
+      fill="#ff8fc0"
+    />
+  </g>
+
+  <text
+    x="48"
+    y="32"
+    dominant-baseline="central"
+    font-family="Liberation Serif"
+    font-size="34"
+    font-style="italic"
+    font-weight="bold"
+    fill="#ff6fae"
+  >joni.site</text>
+</svg>

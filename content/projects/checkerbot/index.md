@@ -5,7 +5,7 @@ description: A small gantry robot which plays checkers.
 tags:
   - Robotics
   - Projects
-image: checkerbot.svg
+image: checkerbot.webp
 altText: A solid light purple rectangle, a placeholder image for the Checkerbot project.
 weight: 2
 ---

@@ -7,7 +7,7 @@ tags:
   - Microsite
   - Embedded
   - Web
-image: microsite.svg
+image: microsite.webp
 altText: A solid pink rectangle, a placeholder image for the Microsite project.
 weight: 1
 ---
