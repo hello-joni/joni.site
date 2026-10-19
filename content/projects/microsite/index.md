@@ -2,7 +2,7 @@
 title: The Microsite
 date: "2025-03-04"
 lastmod: "2026-10-16"
-description: This website, running on an ESP32-S3 devkit with ESP-IDF.
+description: This website, running on an ESP32-S3.
 tags:
   - Microsite
   - Embedded
